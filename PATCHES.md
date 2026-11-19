@@ -6,7 +6,7 @@
 
 全部在 `lib/client.js`：
 
-1. **NAV_CSS 块**（搜索 `dsh-nav-grid`）：侧栏导航两列网格样式，与 `dsh-nav-grid` 插件里的 CSS 保持一致。
+1. ~~NAV_CSS 块~~：导航网格已由 `dsh-nav-grid` 插件负责，本 fork 不再重复注入（11.16.0 升级时删除）。
 2. **文件末尾追加 `dsh-pet-link` 段**：监听阅读器（`lamp-reader`）出现和输入框打字，调用 dsh-pet 的 `/anim`、`/broadcast` 让宠物联动。
    - 音乐联动不在这里，在 `~/code/dsh-music-panel` 的 `src/50-player.js`（`notifyPetMusic`）。
 3. **文件末尾追加 `dsh-nav-drag` 段**：侧栏按钮拖动交换顺序，顺序存 localStorage（`dsh_nav_order`）。
